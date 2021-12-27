@@ -1,12 +1,20 @@
+body {
+    background-color: #f1f2f6;
+}
+
 .jumbotron {
     padding-top: 6rem;
-    background-color: #e2edff;
+    background-color: #a4b0be;
 }
 
 #products {
-    background-color: #e2edff;
+    background-color: #a4b0be;
 }
 
 section {
     padding-top: 6rem;
+}
+
+.active {
+    color: yellow !important;
 }
