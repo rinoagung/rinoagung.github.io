@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="style.css" />
 
         <title>Bootstrap 5</title>
+        <!-- Feather -->
+        <script src="https://unpkg.com/feather-icons"></script>
     </head>
     <body id="home">
         <!-- Navbar -->
@@ -50,7 +52,7 @@
         <section class="jumbotron text-center">
             <img src="Gambar/Minions 640.jpg" alt="Minions" width="200px" class="rounded-circle img-thumbnail" />
             <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">Papoy.</p>
+            <p class="lead"></p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path
                     fill="#f1f2f6"
@@ -139,6 +141,43 @@
                     </div>
                 </div>
             </div>
+
+            <section id="php">
+                <div class="container">
+                    <div class="row text-center mb-3">
+                        <div class="col">
+                            <h2>php</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="php-box">
+                                <h4 class="php-name">PHP</h4>
+                                <p class="php-box-h2">PHP</p>
+                                <img src="Gambar/php.png" alt="PHP" class="php-img" />
+                                <a href="#" class="btn btn-light php-detail-button">Show details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="php-box">
+                                <h4 class="php-name">Laravel</h4>
+                                <p class="php-box-h2">Laravel</p>
+                                <img src="Gambar/laravel.png" alt="Laravel" class="php-img" />
+                                <a href="#" class="btn btn-light php-detail-button">Show details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="php-box">
+                                <h4 class="php-name">Javascript</h4>
+                                <p class="php-box-h2">Javascript</p>
+                                <img src="Gambar/javascript.png" alt="Javascript" class="php-img" style="max-width: 220px" />
+                                <a href="#" class="btn btn-light php-detail-button">Show details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path
                     fill="#f1f2f6"
@@ -162,17 +201,17 @@
                         <form>
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                                <input type="text" class="form-control bg-transparent rounded-pill" id="name" aria-describedby="name" />
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                                <input type="email" class="form-control bg-transparent rounded-pill" id="email" aria-describedby="email" />
                             </div>
                             <div class="mb-3">
                                 <label for="pesan" class="form-label">Pesan</label>
-                                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                                <textarea class="form-control bg-transparent sudut" id="pesan" rows="3"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Kirim</button>
+                            <button type="submit" class="text-decoration-none border-0 p-1 border-bottom" style="color: blue"><span data-feather="send"></span> Send</button>
                         </form>
                     </div>
                 </div>
@@ -224,11 +263,36 @@
             activeMenu();
             window.addEventListener("scroll", activeMenu);
         </script>
+        <!-- Script Feather -->
+        <script>
+            feather.replace();
+        </script>
 
         <!-- script AOS -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            AOS.init();
+            AOS.init({
+                once: true,
+            });
+        </script>
+
+        <!-- Script GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+        <script>
+            gsap.registerPlugin(TextPlugin);
+            gsap.to(".lead", { duration: 2, delay: 1.5, text: "Papoy." });
+            gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+            gsap.from(".display-4", { duration: 1, x: -100, opacity: 0, ease: "back" });
+        </script>
+
+        <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".php-box"), {
+                max: 30,
+                speed: 400,
+                // glare: true,
+            });
         </script>
     </body>
 </html>

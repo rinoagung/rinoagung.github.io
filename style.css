@@ -18,3 +18,78 @@ section {
 .active {
     color: yellow !important;
 }
+
+.sudut {
+    border-radius: 13px;
+}
+
+/* box-section */
+.php-box {
+    position: relative;
+    background-color: #778ca3;
+    border-radius: 10px;
+    height: 500px;
+    transform-style: preserve-3d;
+}
+
+.php-box-h2 {
+    /* content: "PHP"; */
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.php-box:hover .php-box-h2 {
+    opacity: 0.2;
+}
+
+.php-name {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translate3d(0, 0, 50px);
+}
+
+.php-box:hover .php-name {
+    top: 30px;
+    opacity: 1;
+}
+
+.php-detail-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.php-box:hover .php-detail-button {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.php-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -49%, 80px);
+    max-width: 310px;
+    transition: 0.5s;
+}
+
+.php-box:hover .php-img {
+    transform: translate3d(-50%, -42%, 100px) scale(1.2);
+}
