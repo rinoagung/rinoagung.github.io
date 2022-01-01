@@ -2,6 +2,10 @@ body {
     background-color: #f1f2f6;
 }
 
+#php {
+    overflow: hidden;
+}
+
 .jumbotron {
     padding-top: 6rem;
     background-color: #a4b0be;
@@ -88,6 +92,7 @@ section {
     transform: translate3d(-50%, -49%, 80px);
     max-width: 310px;
     transition: 0.5s;
+    overflow-x: hidden;
 }
 
 .php-box:hover .php-img {
