@@ -2,8 +2,13 @@ body {
     background-color: #f1f2f6;
 }
 
-#php {
-    overflow: hidden;
+.php-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -49%, 80px);
+    max-width: 310px;
+    transition: 0.5s;
 }
 
 .jumbotron {
@@ -17,6 +22,7 @@ body {
 
 section {
     padding-top: 6rem;
+    overflow-x: hidden;
 }
 
 .active {
@@ -83,16 +89,6 @@ section {
 .php-box:hover .php-detail-button {
     opacity: 1;
     bottom: 20px;
-}
-
-.php-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -49%, 80px);
-    max-width: 310px;
-    transition: 0.5s;
-    overflow-x: hidden;
 }
 
 .php-box:hover .php-img {
