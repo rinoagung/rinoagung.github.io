@@ -2,6 +2,19 @@ body {
     background-color: #f1f2f6;
 }
 
+/* Sembunyikan panah samping nomor */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .php-img {
     position: absolute;
     top: 50%;
@@ -93,4 +106,9 @@ section {
 
 .php-box:hover .php-img {
     transform: translate3d(-50%, -42%, 100px) scale(1.2);
+}
+
+.kirim:hover {
+    background-color: #dfe6e9;
+    transform: translate(0, 7%);
 }

@@ -40,7 +40,7 @@
                             <a class="nav-link" href="#products">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#products">Environments</a>
+                            <a class="nav-link" href="#Environments">Environments</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
@@ -145,36 +145,52 @@
                 </div>
             </div>
 
-            <section id="php">
+            <section id="Environments">
                 <div class="container">
                     <div class="row text-center mb-3">
                         <div class="col">
                             <h2>Environments</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4 mb-3">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 mb-5">
                             <div class="php-box">
                                 <h4 class="php-name">PHP</h4>
                                 <p class="php-box-h2">PHP</p>
                                 <img src="Gambar/php.png" alt="PHP" class="php-img" />
-                                <a href="#" class="btn btn-light php-detail-button">Show details</a>
+                                <!-- <a href="#" class="btn btn-light php-detail-button">Show details</a> -->
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="col-md-6 col-lg-4 mb-5">
                             <div class="php-box">
                                 <h4 class="php-name">Laravel</h4>
                                 <p class="php-box-h2">Laravel</p>
                                 <img src="Gambar/laravel.png" alt="Laravel" class="php-img" />
-                                <a href="#" class="btn btn-light php-detail-button">Show details</a>
+                                <!-- <a href="#" class="btn btn-light php-detail-button">Show details</a> -->
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="col-md-6 col-lg-4 mb-5">
                             <div class="php-box">
                                 <h4 class="php-name">Javascript</h4>
                                 <p class="php-box-h2">Javascript</p>
                                 <img src="Gambar/javascript.png" alt="Javascript" class="php-img" style="max-width: 220px" />
-                                <a href="#" class="btn btn-light php-detail-button">Show details</a>
+                                <!-- <a href="#" class="btn btn-light php-detail-button">Show details</a> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="php-box">
+                                <h4 class="php-name">Github</h4>
+                                <p class="php-box-h2">Github</p>
+                                <img src="Gambar/github.png" alt="Github" class="php-img" style="max-width: 220px" />
+                                <!-- <a href="#" class="btn btn-light php-detail-button">Show details</a> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="php-box">
+                                <h4 class="php-name">Nodejs</h4>
+                                <p class="php-box-h2">Nodejs</p>
+                                <img src="Gambar/nodejs.png" alt="Nodejs" class="php-img" style="max-width: 220px" />
+                                <!-- <a href="#" class="btn btn-light php-detail-button">Show details</a> -->
                             </div>
                         </div>
                     </div>
@@ -195,26 +211,36 @@
         <section id="contact">
             <div class="container">
                 <div class="row text-center mb-3">
+                    <div class="btn-notif d-none alert text-start alert-success alert-dismissible fade show" role="alert">
+                        Pesan telah <strong>terkirim!</strong> Terima kasih
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                     <div class="col">
                         <h2>Contact Me</h2>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <form>
+                        <form name="contact-form-portofolio">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama Lengkap</label>
-                                <input type="text" class="form-control bg-transparent rounded-pill" id="name" aria-describedby="name" />
+                                <input name="nama" type="text" class="form-control bg-transparent rounded-pill" id="name" aria-describedby="name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="no telp" class="form-label">Nomor Telepon</label>
+                                <input name="no telp" type="number" class="form-control bg-transparent rounded-pill" id="no telp" aria-describedby="no telp" />
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control bg-transparent rounded-pill" id="email" aria-describedby="email" />
+                                <input name="email" type="email" class="form-control bg-transparent rounded-pill" id="email" aria-describedby="email" />
                             </div>
                             <div class="mb-3">
                                 <label for="pesan" class="form-label">Pesan</label>
-                                <textarea class="form-control bg-transparent sudut" id="pesan" rows="3"></textarea>
+                                <textarea name="pesan" class="form-control bg-transparent sudut" id="pesan" rows="3"></textarea>
                             </div>
-                            <button type="submit" class="text-decoration-none border-0 p-1 border-bottom" style="color: blue"><span data-feather="send"></span> Send</button>
+                            <button type="submit" class="btn-kirim text-decoration-none border-0 p-1 border-bottom kirim" style="color: blue">
+                                <span data-feather="send"></span> Send <span class="d-none btn-loading spinner-border spinner-border-sm ms-2" style="width: 1.3rem; height: 1.3rem" role="status" aria-hidden="true"></span>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -289,12 +315,42 @@
             gsap.from(".display-4", { duration: 1, x: -100, opacity: 0, ease: "back" });
         </script>
 
+        <!-- Script 3d effect -->
         <script type="text/javascript" src="vanilla-tilt.min.js"></script>
         <script type="text/javascript">
             VanillaTilt.init(document.querySelectorAll(".php-box"), {
                 max: 30,
                 speed: 400,
                 // glare: true,
+            });
+        </script>
+
+        <!-- Script form contact -->
+        <script>
+            const scriptURL = "https://script.google.com/macros/s/AKfycbyGQagcZmeBuq1GoS0-kAPP1pg-zxZVgULkoGPi2fTGEOP2EFPcMbcmQLa4EQY6AtRM/exec";
+            const form = document.forms["contact-form-portofolio"];
+            const btnKirim = document.querySelector(".btn-kirim");
+            const btnNotif = document.querySelector(".btn-notif");
+            const btnLoading = document.querySelector(".btn-loading");
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                // ketika tombol submit di klik
+                // Tampilkan loading
+                btnLoading.classList.toggle("d-none");
+                fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                    .then((response) => {
+                        // Hilangkan loading
+                        btnLoading.classList.toggle("d-none");
+                        // Tampilkan alert
+                        btnNotif.classList.toggle("d-none");
+                        // reset form
+                        form.reset();
+
+                        console.log("Success!", response);
+                    })
+                    .catch((error) => console.error("Error!", error.message));
             });
         </script>
     </body>
