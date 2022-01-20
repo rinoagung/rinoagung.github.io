@@ -325,9 +325,18 @@ section {
     color: blue;
 }
 
-.buttonicon:hover::after {
+.buttonicon:nth-child(1):hover::after {
     content: "Instagram";
     color: black;
+    font-size: 2rem;
+    padding-right: 8px;
+}
+
+.buttonicon:nth-child(2):hover::after {
+    content: "Linkedin";
+    color: black;
+    font-size: 2rem;
+    padding-right: 8px;
 }
 /* .linkedin:hover::after {
     content: "Linkedin";
