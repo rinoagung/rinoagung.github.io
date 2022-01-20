@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Itim&family=Outfit:wght@300&display=swap");
+
 body {
     background-color: #f1f2f6;
 }
@@ -13,6 +15,35 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+.progress-bar1 {
+    height: 8px;
+    background: #04aa6d;
+    width: 0%;
+}
+
+.navprogress {
+    position: fixed;
+    top: 0;
+    margin-top: 55px;
+    z-index: 1;
+    width: 100%;
+}
+
+.navbar-brand:hover {
+    color: yellow !important;
+    font-weight: 500;
+}
+
+.myname {
+    font-size: 3.2rem;
+    font-family: "Outfit", sans-serif;
+}
+
+.lead {
+    font-size: 1.6rem;
+    font-family: "Itim", cursive;
 }
 
 .php-img {
@@ -38,8 +69,139 @@ input[type="number"] {
     background-color: #a4b0be;
 }
 
+.sertifikat {
+    overflow: hidden;
+    transition: 0.2s;
+    font-size: 2.4rem;
+    text-decoration: none;
+    font-family: "Caveat", cursive;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+}
+
+.sertifikat span {
+    position: absolute;
+    display: block;
+}
+
+.sertifikat:hover {
+    color: teal;
+    background: yellow;
+    box-shadow: 0 0 10px yellow, 0 0 40px yellow, 0 0 80px yellow;
+    transition-delay: 0.2s;
+}
+
+.sertifikat span:nth-child(1) {
+    background: linear-gradient(90deg, transparent, red);
+    animation-name: garis;
+    animation-duration: 2.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.sertifikat span:nth-child(2) {
+    background: linear-gradient(180deg, transparent, red);
+    animation-name: garis2;
+    animation-duration: 2.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.sertifikat span:nth-child(3) {
+    background: linear-gradient(270deg, transparent, red);
+    animation-name: garis3;
+    animation-duration: 2.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.sertifikat span:nth-child(4) {
+    background: linear-gradient(360deg, transparent, red);
+    animation-name: garis4;
+    animation-duration: 2.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes garis {
+    0% {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 4px;
+    }
+    25% {
+        left: 100%;
+    }
+    50% {
+    }
+    75% {
+    }
+    100% {
+    }
+}
+@keyframes garis2 {
+    0% {
+    }
+    25% {
+        right: 0;
+        top: -100%;
+        height: 100%;
+        width: 4px;
+        background: linear-gradient(180deg, transparent, red);
+    }
+    50% {
+        top: 100%;
+    }
+    75% {
+    }
+    100% {
+    }
+}
+
+@keyframes garis3 {
+    0% {
+    }
+    25% {
+    }
+    50% {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(270deg, transparent, red);
+    }
+    75% {
+        right: 100%;
+    }
+    100% {
+    }
+}
+
+@keyframes garis4 {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    75% {
+        left: 0;
+        bottom: -100%;
+        height: 100%;
+        width: 4px;
+        background: linear-gradient(360deg, transparent, red);
+    }
+    90% {
+        bottom: 100%;
+    }
+    100% {
+    }
+}
+
+.sertifikat:hover span {
+    animation: none;
+}
+
 section {
-    padding-top: 2rem;
+    padding-top: 4rem;
     overflow-x: hidden;
 }
 
@@ -138,6 +300,50 @@ section {
 
 .kunjungi span {
     margin: auto;
+}
+
+.buttonicon {
+    /* width: 50px; */
+    overflow: hidden;
+    display: flex;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.icon {
+    font-size: 2.2rem;
+    padding: 0px 8px;
+    border-radius: 50px;
+    background-color: yellow;
+}
+
+.instagram:hover {
+    color: red;
+}
+
+.linkedin:hover {
+    color: blue;
+}
+
+.buttonicon:hover::after {
+    content: "Instagram";
+    color: black;
+}
+/* .linkedin:hover::after {
+    content: "Linkedin";
+    color: black;
+} */
+
+.buttonicon:hover {
+    max-width: 250px;
+}
+
+.wrapper.buttonicon.icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
 }
 
 .kunjungi:hover {
