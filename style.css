@@ -311,40 +311,56 @@ section {
 }
 
 .icon {
-    font-size: 2.2rem;
-    padding: 0px 8px;
+    font-size: 1.8rem;
+    padding: 4px 12px;
     border-radius: 50px;
     background-color: yellow;
 }
 
-.instagram:hover {
-    color: red;
+.instagram:hover .icon {
+    color: white;
+    background-color: #e84393;
 }
 
-.linkedin:hover {
-    color: blue;
+.linkedin:hover .icon {
+    color: white;
+    background-color: #0d6efd;
 }
 
-.buttonicon:nth-child(1):hover::after {
+.instagram::after {
     content: "Instagram";
     color: black;
-    font-size: 2rem;
+    width: 0;
+    font-size: 1.7rem;
     padding-right: 8px;
+    transition: 0.5s;
+    opacity: 0;
+    transition-timing-function: ease-out;
+    padding-right: 0;
 }
 
-.buttonicon:nth-child(2):hover::after {
-    content: "Linkedin";
-    color: black;
-    font-size: 2rem;
-    padding-right: 8px;
+.instagram:hover::after {
+    opacity: 1;
+    width: 140px;
+    margin-left: 10px;
 }
-/* .linkedin:hover::after {
+
+.linkedin::after {
     content: "Linkedin";
     color: black;
-} */
+    width: 0;
+    font-size: 1.7rem;
+    padding-right: 8px;
+    transition: 0.5s;
+    opacity: 0;
+    transition-timing-function: ease-out;
+    padding-right: 0;
+}
 
-.buttonicon:hover {
-    max-width: 250px;
+.linkedin:hover::after {
+    opacity: 1;
+    width: 115px;
+    margin-left: 10px;
 }
 
 .wrapper.buttonicon.icon {
@@ -374,6 +390,24 @@ section {
     .img-thumbnail {
         width: 100px;
         margin-top: -50px;
+    }
+    .icon {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+    .instagram:hover::after {
+        width: 77px;
+        margin-left: 7px;
+    }
+    .instagram::after {
+        font-size: 0.9rem;
+    }
+    .linkedin:hover::after {
+        width: 67px;
+        margin-left: 7px;
+    }
+    .linkedin::after {
+        font-size: 0.9rem;
     }
 }
 
