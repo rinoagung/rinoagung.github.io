@@ -303,7 +303,6 @@ section {
 }
 
 .buttonicon {
-    /* width: 50px; */
     overflow: hidden;
     display: flex;
     border-radius: 50px;
@@ -378,7 +377,6 @@ section {
 
 .nav-link:hover::after {
     content: "";
-    /* color: blue !important; */
     display: block;
     border-bottom: 3px solid #f8f8ff;
     width: 50%;
