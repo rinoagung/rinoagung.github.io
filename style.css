@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Itim&family=Outfit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dongle&family=Itim&family=Outfit:wght@300&display=swap");
 
 body {
     background-color: #f1f2f6;
@@ -21,6 +21,10 @@ input[type="number"] {
     height: 8px;
     background: #04aa6d;
     width: 0%;
+}
+
+.box {
+    display: none;
 }
 
 .navprogress {
@@ -46,7 +50,7 @@ input[type="number"] {
     font-family: "Itim", cursive;
 }
 
-.php-img {
+.an-img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -214,7 +218,7 @@ section {
 }
 
 /* box-section */
-.php-box {
+.an-box {
     position: relative;
     background-color: #778ca3;
     border-radius: 10px;
@@ -222,7 +226,7 @@ section {
     transform-style: preserve-3d;
 }
 
-.php-box-h2 {
+.an-box-h2 {
     /* content: "PHP"; */
     position: absolute;
     color: #fff;
@@ -236,11 +240,11 @@ section {
     transition: 0.5s;
 }
 
-.php-box:hover .php-box-h2 {
+.an-box:hover .an-box-h2 {
     opacity: 0.2;
 }
 
-.php-name {
+.an-name {
     top: 0;
     width: 100%;
     position: absolute;
@@ -252,26 +256,26 @@ section {
     transform: translate3d(0, 0, 50px);
 }
 
-.php-box:hover .php-name {
+.an-box:hover .an-name {
     top: 30px;
     opacity: 1;
 }
-
-.php-detail-button {
+/* 
+.an-detail-button {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate3d(-50%, 0, 100px);
     opacity: 0;
     transition: 0.5s;
-}
+} */
 
-.php-box:hover .php-detail-button {
+.an-box:hover .an-detail-button {
     opacity: 1;
     bottom: 20px;
 }
 
-.php-box:hover .php-img {
+.an-box:hover .an-img {
     transform: translate3d(-50%, -42%, 100px) scale(1.2);
 }
 
@@ -328,37 +332,41 @@ section {
 
 .instagram::after {
     content: "Instagram";
-    color: black;
+    font-family: "Dongle", sans-serif;
+    color: #e84393;
     width: 0;
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     padding-right: 8px;
     transition: 0.5s;
     opacity: 0;
     transition-timing-function: ease-out;
     padding-right: 0;
+    margin-bottom: -5px;
 }
 
 .instagram:hover::after {
     opacity: 1;
-    width: 140px;
+    width: 115px;
     margin-left: 10px;
 }
 
 .linkedin::after {
     content: "Linkedin";
-    color: black;
+    font-family: "Dongle", sans-serif;
+    color: #0d6efd;
     width: 0;
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     padding-right: 8px;
     transition: 0.5s;
     opacity: 0;
     transition-timing-function: ease-out;
     padding-right: 0;
+    margin-bottom: -5px;
 }
 
 .linkedin:hover::after {
     opacity: 1;
-    width: 115px;
+    width: 95px;
     margin-left: 10px;
 }
 
@@ -398,20 +406,64 @@ section {
         margin-left: 7px;
     }
     .instagram::after {
-        font-size: 0.9rem;
+        font-size: 1.45rem;
     }
     .linkedin:hover::after {
-        width: 67px;
+        width: 63px;
         margin-left: 7px;
     }
     .linkedin::after {
-        font-size: 0.9rem;
+        font-size: 1.45rem;
+    }
+    .an-img {
+        max-width: 80px;
+    }
+
+    .an-box:hover .an-box-h2 {
+        opacity: 0.2;
+        top: 20px;
+    }
+    .an-box:hover .an-img {
+        transform: translate3d(-50%, -36%, 100px) scale(1.2);
+    }
+    .an-box:hover .an-name {
+        top: 15px;
+        opacity: 1;
+    }
+
+    .an-box-h2 {
+        font-size: 4rem;
+    }
+    .an-box {
+        height: 350px;
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .an-img {
+        max-width: 270px;
+    }
+}
+@media only screen and (max-width: 995px) {
+    .box:nth-child(1) {
+        display: inline-block;
+    }
+    .box:nth-child(2) {
+        display: inline-block;
+    }
+}
 @media only screen and (min-width: 768px) {
     .cover {
         max-height: 300px;
         overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 996px) {
+    .box {
+        display: inline-block;
+    }
+    #load-more {
+        display: none;
     }
 }

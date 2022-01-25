@@ -2,6 +2,27 @@
 feather.replace();
 //----//
 
+// script load more
+let loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 2;
+let boxes = [...document.querySelectorAll('.containerbox .box-container .box')];
+// for (let i = 0; i < 2; i++) {
+//     boxes[i].style.display = 'inline-block';
+// }
+
+
+loadMoreBtn.onclick = () => {
+
+    for (let i = currentItem; i < currentItem + 2; i++) {
+        boxes[i].style.display = 'inline-block';
+    }
+    currentItem += 2;
+
+    if (currentItem > (boxes.length - 1)) {
+        loadMoreBtn.style.display = 'none';
+    }
+}
+//...//
 
 // Active scrolling
 const li = document.querySelectorAll(".nav-link");
