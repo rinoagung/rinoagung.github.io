@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dongle&family=Itim&family=Outfit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@700&family=Dongle&family=Itim&family=Outfit:wght@300&display=swap");
 
 body {
     background-color: #f1f2f6;
@@ -50,6 +50,28 @@ input[type="number"] {
     font-family: "Itim", cursive;
 }
 
+.carousel-click {
+    font-family: "Architects Daughter", cursive;
+    background-color: yellow;
+    width: 100px;
+    animation-name: carousel-click;
+    animation-duration: 1.05s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes carousel-click {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .an-img {
     position: absolute;
     top: 50%;
@@ -79,7 +101,6 @@ input[type="number"] {
     font-size: 2.4rem;
     text-decoration: none;
     font-family: "Caveat", cursive;
-    /* text-transform: uppercase; */
     letter-spacing: 2px;
 }
 
@@ -279,15 +300,94 @@ section {
     transform: translate3d(-50%, -42%, 100px) scale(1.2);
 }
 
-.kirim:hover {
-    background-color: #e7e7e7;
-    border-bottom: 2px solid blue !important;
-    margin: -0.5px !important;
+.kirim {
+    color: #ff6700;
+    position: relative;
+    display: inline-block;
+}
+
+.kirim span {
+    display: block;
+    position: absolute;
+    background-color: #ff6700;
+}
+
+.kirim span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s;
+}
+
+.kirim:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+}
+
+.kirim span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.kirim:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+}
+
+.kirim span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+
+.kirim:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+
+.kirim span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+
+.kirim:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
 }
 
 .kirim:active {
     transform: translate(0, 7%);
+    margin-bottom: -1px;
     border-bottom: 2px solid transparent !important;
+}
+
+.kirim:active span {
+    display: none;
 }
 
 .kunjungi {
@@ -302,8 +402,36 @@ section {
     opacity: 0;
 }
 
+.bi-caret-down-fill {
+    position: absolute;
+    animation: down;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes down {
+    0% {
+        top: 10%;
+    }
+    50% {
+        top: 40%;
+    }
+    100% {
+        top: 10%;
+    }
+}
+
 .kunjungi span {
     margin: auto;
+}
+
+.load-more {
+    font-weight: bold;
+    border-bottom: 5px solid #7fff00;
+    padding-right: 37px;
+    width: fit-content;
+    position: absolute;
 }
 
 .buttonicon {
@@ -378,7 +506,7 @@ section {
     border-radius: 50px;
 }
 
-.kunjungi:hover {
+.a-kunjungi:hover .kunjungi {
     opacity: 1;
     background-color: rgba(128, 128, 128, 0.562);
 }
@@ -392,10 +520,89 @@ section {
     margin-bottom: -3px;
 }
 
+.button-top {
+    background-color: rgba(0, 0, 0, 0.15);
+    position: fixed;
+    right: 100px;
+    font-size: 2rem;
+    bottom: 100px;
+    z-index: 99;
+    animation: atas;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    transition: height 0.5s;
+}
+
+.garis-bounce {
+    position: fixed;
+    bottom: 99px;
+    right: 115px;
+    width: 30px;
+    border-bottom: #7fff00 solid 1px;
+}
+
+.atas {
+    animation: arah;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    transition: height 0.5s;
+    color: #7fff00;
+}
+
+@keyframes arah {
+    0%,
+    50%,
+    to {
+        height: 70px;
+        transform: scale(1, 1);
+    }
+
+    20%,
+    70%,
+    to {
+        height: 50px;
+        transform: scale(1, 0.4);
+    }
+    100% {
+        height: 70px;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes atas {
+    0%,
+    50%,
+    to {
+        bottom: 130px;
+        height: 70px;
+    }
+
+    20%,
+    70%,
+    to {
+        bottom: 100px;
+        height: 50px;
+    }
+    100% {
+        bottom: 130px;
+        height: 70px;
+    }
+}
+
+.carousel-caption {
+    top: 5px;
+    right: 40%;
+}
+
 @media only screen and (max-width: 768px) {
     .img-thumbnail {
         width: 100px;
         margin-top: -50px;
+    }
+    .port-small {
+        display: none;
     }
     .icon {
         font-size: 1rem;
@@ -437,6 +644,62 @@ section {
     .an-box {
         height: 350px;
     }
+
+    .button-top {
+        right: 50px;
+        font-size: 1.2rem;
+        animation: atas;
+        animation-duration: 1.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        transition: height 0.5s;
+    }
+
+    .garis-bounce {
+        right: 63px;
+        width: 20px;
+        border-bottom: white solid 1px;
+    }
+
+    @keyframes arah {
+        0%,
+        50%,
+        to {
+            height: 50px;
+            transform: scale(1, 1);
+        }
+
+        20%,
+        70%,
+        to {
+            height: 30px;
+            transform: scale(1, 0.4);
+        }
+        100% {
+            height: 50px;
+            transform: scale(1, 1);
+        }
+    }
+
+    @keyframes atas {
+        0%,
+        50%,
+        to {
+            bottom: 130px;
+            height: 50px;
+        }
+
+        20%,
+        70%,
+        to {
+            bottom: 100px;
+            height: 30px;
+        }
+        100% {
+            bottom: 130px;
+            height: 50px;
+        }
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -451,11 +714,17 @@ section {
     .box:nth-child(2) {
         display: inline-block;
     }
+    .nav-link:hover::after {
+        display: none;
+    }
 }
 @media only screen and (min-width: 768px) {
     .cover {
         max-height: 300px;
         overflow: hidden;
+    }
+    .port-large {
+        display: none;
     }
 }
 

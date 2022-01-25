@@ -6,9 +6,6 @@ feather.replace();
 let loadMoreBtn = document.querySelector('#load-more');
 let currentItem = 2;
 let boxes = [...document.querySelectorAll('.containerbox .box-container .box')];
-// for (let i = 0; i < 2; i++) {
-//     boxes[i].style.display = 'inline-block';
-// }
 
 
 loadMoreBtn.onclick = () => {
@@ -80,9 +77,35 @@ form.addEventListener("submit", (e) => {
 });
 //----//
 
+// Trigger scroll up
+let buttonTop = document.querySelector(".button-top");
 
 
+window.addEventListener("scroll", () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
 
+    const ini = scrollable - 100;
+    // console.log("scrollable = " + ini);
+    // console.log("scrolled = " + scrolled);
+
+    if (Math.ceil(scrolled) >= ini) {
+        buttonTop.classList.remove('d-none');
+    } else {
+        buttonTop.classList.add('d-none');
+    }
+})
+
+function scrollToTop() {
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    // window.scrollTo({
+    //     top: 0,
+    // })
+}
+
+//----//
 
 
 

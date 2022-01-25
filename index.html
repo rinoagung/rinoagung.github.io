@@ -16,7 +16,7 @@
         <!-- style.css -->
         <link rel="stylesheet" href="style.css" />
 
-        <title>Bootstrap 5</title>
+        <title>Rino_Portfolio</title>
         <!-- Feather -->
         <script src="https://unpkg.com/feather-icons"></script>
     </head>
@@ -92,7 +92,7 @@
                 <div class="row justify-content-center fs-5 text-center">
                     <div class="col-md-4" data-aos="fade-right" data-aos-duration="1300">
                         <!-- <p>Seseorang yang mencoba membuat sebuah kode program menjadi sebuah cerita yang menarik untuk kehidupan.</p> -->
-                        <p>Hanya seseorang yang sering bermain komputer dan juga suka mengetik ini dan itu di laptop pribadinya.</p>
+                        <p>Hanya seseorang yang sering bermain komputer dan juga suka mengetik ini itu di laptop pribadinya.</p>
                     </div>
                     <div class="col-md-4" data-aos="fade-left" data-aos-duration="1300" data-aos-delay="200">
                         <!-- <p>Someone who tries to turn program code into an interesting life story.</p> -->
@@ -118,11 +118,11 @@
                         <h2>My Portfolio</h2>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center port-small">
                     <div class="col-md-4 mb-3" data-aos="fade-right">
                         <div class="card">
                             <img src="Gambar/wingko.png" class="card-img-top" alt="Keyboard" />
-                            <a href="https://order-wingkoo.web.app/">
+                            <a href="https://order-wingkoo.web.app/" class="a-kunjungi">
                                 <div class="kunjungi">
                                     <span>Visit <span data-feather="external-link" class="mb-2"></span></span>
                                 </div>
@@ -131,14 +131,49 @@
                     </div>
                     <div class="col-md-4 mb-3" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200">
                         <div class="card">
-                            <img src="Gambar/mvc.png" class="card-img-top" alt="Keyboard2" />
+                            <img src="Gambar/eventtouch.png" class="card-img-top" alt="Keyboard2" />
                         </div>
                     </div>
                     <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-delay="200">
                         <div class="card">
-                            <img src="Gambar/eventtouch.png" class="card-img-top" alt="Mouse.jpg" />
+                            <img src="Gambar/mvc.png" class="card-img-top" alt="Mouse.jpg" />
                         </div>
                     </div>
+                </div>
+                <div id="carouselExampleDark" class="carousel carousel-dark slide port-large" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <a href="https://order-wingkoo.web.app/" class="a-kunjungi">
+                                <div class="carousel-caption d-block">
+                                    <h5 class="carousel-click">Click Me</h5>
+                                </div>
+
+                                <img src="Gambar/wingko.png" class="d-block w-100" alt="Wingko" />
+                                <div class="kunjungi">
+                                    <span>Visit <span data-feather="external-link" class="mb-2"></span></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="Gambar/eventtouch.png" class="d-block w-100" alt="Event Touch" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Gambar/mvc.png" class="d-block w-100" alt="PHP mvc" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
 
@@ -210,8 +245,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <div id="load-more" class="btn btn-primary" style="width: fit-content">Load more</div>
+                    <div class="d-flex justify-content-center pb-5">
+                        <div id="load-more" class="btn load-more">Load more <i class="bi bi-caret-down-fill ms-3"></i></div>
                     </div>
                 </div>
             </section>
@@ -230,7 +265,7 @@
         <section id="contact">
             <div class="container">
                 <div class="row text-center mb-3">
-                    <div class="btn-notif d-none alert text-start alert-success alert-dismissible fade show" role="alert">
+                    <div class="btn-notif d-none alert text-start alert-success alert-dismissible fade show" style="border-radius: 10px; background-color: #7fff00" role="alert">
                         Pesan telah <strong>terkirim!</strong> Terima kasih
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
@@ -257,8 +292,13 @@
                                 <label for="pesan" class="form-label">Pesan</label>
                                 <textarea name="pesan" class="form-control bg-transparent sudut" id="pesan" rows="3" required></textarea>
                             </div>
-                            <button type="submit" class="text-decoration-none border-0 p-1 border-bottom kirim px-2" style="color: blue">
-                                <span data-feather="send"></span> Send <span class="d-none btn-loading spinner-border spinner-border-sm ms-2" style="width: 1.3rem; height: 1.3rem" role="status" aria-hidden="true"></span>
+                            <button type="submit" class="text-decoration-none border-0 p-1 border-bottom kirim px-2">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span data-feather="send"></span> Send
+                                <div class="d-none btn-loading spinner-border spinner-border-sm ms-2" style="width: 1.3rem; height: 1.3rem; margin-bottom: -3px" role="status" aria-hidden="true"></div>
                             </button>
                         </form>
                     </div>
@@ -275,6 +315,14 @@
         <!-- Akhir Contact -->
 
         <footer class="pb-5" style="background-color: #a4b0be">
+            <div class="position-relative">
+                <button type="button" onclick="scrollToTop();" class="d-none btn button-top rounded-circle">
+                    <div class="atas">
+                        <i class="bi bi-chevron-up"></i>
+                    </div>
+                    <div class="garis-bounce"></div>
+                </button>
+            </div>
             <div class="bungkusicon d-flex justify-content-center m-0 p-0 overflow-hidden pb-3">
                 <div class="wrapper d-flex">
                     <a class="mx-1" href="https://www.instagram.com/rinoagung_/" style="color: black; text-decoration: none">
