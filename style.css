@@ -741,7 +741,6 @@ section {
         display: none;
     }
 }
-
 @media only screen and (min-width: 996px) {
     .box {
         display: inline-block;
