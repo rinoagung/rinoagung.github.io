@@ -448,6 +448,11 @@ section {
     background-color: yellow;
 }
 
+.shopee:hover .icon {
+    color: white;
+    background-color: #ef4e2d;
+}
+
 .instagram:hover .icon {
     color: white;
     background-color: #e84393;
@@ -458,10 +463,10 @@ section {
     background-color: #0d6efd;
 }
 
-.instagram::after {
-    content: "Instagram";
+.shopee::after,
+.instagram::after,
+.linkedin::after {
     font-family: "Dongle", sans-serif;
-    color: #e84393;
     width: 0;
     font-size: 2.2rem;
     padding-right: 8px;
@@ -472,30 +477,38 @@ section {
     margin-bottom: -5px;
 }
 
-.instagram:hover::after {
+.shopee:hover::after,
+.instagram:hover::after,
+.linkedin:hover::after {
     opacity: 1;
-    width: 115px;
     margin-left: 10px;
+}
+
+.shopee::after {
+    content: "Shopee";
+    color: #ef4e2d;
+}
+
+.shopee:hover::after {
+    width: 90px;
+}
+
+.instagram::after {
+    content: "Instagram";
+    color: #e84393;
+}
+
+.instagram:hover::after {
+    width: 115px;
 }
 
 .linkedin::after {
     content: "Linkedin";
-    font-family: "Dongle", sans-serif;
     color: #0d6efd;
-    width: 0;
-    font-size: 2.2rem;
-    padding-right: 8px;
-    transition: 0.5s;
-    opacity: 0;
-    transition-timing-function: ease-out;
-    padding-right: 0;
-    margin-bottom: -5px;
 }
 
 .linkedin:hover::after {
-    opacity: 1;
     width: 95px;
-    margin-left: 10px;
 }
 
 .wrapper.buttonicon.icon {
@@ -608,20 +621,27 @@ section {
         font-size: 1rem;
         padding: 8px 12px;
     }
+    .shopee::after,
+    .instagram::after,
+    .linkedin::after {
+        font-size: 1.45rem;
+    }
+
+    .shopee:hover::after {
+        width: 60px;
+        margin-left: 7px;
+    }
+
     .instagram:hover::after {
         width: 77px;
         margin-left: 7px;
     }
-    .instagram::after {
-        font-size: 1.45rem;
-    }
+
     .linkedin:hover::after {
         width: 63px;
         margin-left: 7px;
     }
-    .linkedin::after {
-        font-size: 1.45rem;
-    }
+
     .an-img {
         max-width: 80px;
     }
@@ -646,19 +666,13 @@ section {
     }
 
     .button-top {
-        right: 50px;
+        right: 35px;
         font-size: 1.2rem;
-        animation: atas;
-        animation-duration: 1.6s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in;
-        transition: height 0.5s;
     }
 
     .garis-bounce {
-        right: 63px;
+        right: 48px;
         width: 20px;
-        border-bottom: white solid 1px;
     }
 
     @keyframes arah {
