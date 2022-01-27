@@ -19,7 +19,39 @@ loadMoreBtn.onclick = () => {
         loadMoreBtn.style.display = 'none';
     }
 }
-//...//
+//----//
+
+
+// Script AOS
+
+const envBox = document.querySelectorAll(".box");
+envBox.forEach((box, i) => {
+    box.dataset.aos = "zoom-in-up";
+    box.dataset.aosDelay = i * 200;
+    box.dataset.aosDuration = 1200;
+})
+const buttonIcon = document.querySelectorAll(".buttonicon");
+buttonIcon.forEach((buttonicon, i) => {
+    buttonicon.dataset.aos = "zoom-in-up";
+    buttonicon.dataset.aosDelay = i * 200;
+    buttonicon.dataset.aosDuration = 1200;
+})
+const formLabel = document.querySelectorAll(".form-label");
+formLabel.forEach((formLabel, i) => {
+    formLabel.dataset.aos = "fade-left";
+    formLabel.dataset.aosDelay = i * 200;
+    formLabel.dataset.aosDuration = 700;
+})
+const formControl = document.querySelectorAll(".form-control");
+formControl.forEach((formControl, i) => {
+    formControl.dataset.aos = "fade-zoom-in";
+    formControl.dataset.aosDelay = 1000;
+})
+
+AOS.init({
+    once: true,
+});
+//----//
 
 // Active scrolling
 const li = document.querySelectorAll(".nav-link");
